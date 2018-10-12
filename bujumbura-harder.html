@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bujumbura Data</title>
+</head>
+
+<body>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city"></div>
+  <div class="wind"></div>
+  <div class="humidity"></div>
+  <div class="temp"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Things to accomplish:
+    // Get an API Key from OpenWeatherMap API
+
+
+    // Create an AJAX call to retrieve data Log the data in console
+  $ajax({
+    method:"GET",
+    url:"https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&appid=" + "476ed369d418e03a818f6aae7b4778ff";
+  })
+    console.log(response.city);
+    console.log(response.wind);
+    console.log(response.humidity);
+    console.log(response.temp);
+
+    // Log the data in HTML
+  
+  $("body").append(city);
+  $("body").append(wind);
+  $("body").append(humidity);
+  $("body").append(temp);
+  
+  //Scream Ushindi (victory in Swahili)! at the top of your lungs
+
+  // example code
+
+  $(document).ready(function(){
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip=02878,us",function(result){
+        const message = ("Weather: "+ result.weather[0].main);
+        $('firstDay h1').append(Ushindi);
+        });
+    });
+    
+  </script>
+
+</body>
+
+</html>
